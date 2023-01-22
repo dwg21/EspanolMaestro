@@ -1,0 +1,13 @@
+.gif {
+    object-fit: cover;
+    max-height: 400px;
+    width: 100%
+}
+
+
+.verb{
+    color: #0A66C2;
+    font-weight: 900;
+    font-size: 30px;
+
+}
