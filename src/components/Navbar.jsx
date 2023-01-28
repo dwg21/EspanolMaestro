@@ -17,7 +17,7 @@ const Navbar = () => {
     direction = 'row'
     alignItems='center'
     p = {2}
-    sx ={{position: 'sticky', background: '#dae0e6',top: 0, justifyContent: 'space-evenly'}}
+    sx ={{position: 'sticky', background: '#dae0e6',top: 0, justifyContent: 'space-evenly' , zIndex:100}}
 
   
     >

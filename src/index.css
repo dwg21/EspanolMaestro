@@ -85,3 +85,24 @@ input {
   width: 800px
   
 }
+
+.heading {
+  color:  #0A66C2;
+  font-weight: 800;
+  font-size: 44px;
+  
+}
+
+.subheading {
+  font-weight: bold;
+}
+
+.swapIcon:hover {
+  cursor: pointer;
+}
+
+.correctAnswer {
+  color: green;
+  font-weight: 600;
+  font-size: 32px;
+}

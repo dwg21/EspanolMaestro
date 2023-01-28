@@ -4,6 +4,7 @@ import { GetTranslation } from '../util/DeepLApi'
 
 import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import { Footer } from ".";
+import { minWidth } from "@mui/system";
 
 
 const Translator = () => {
@@ -17,6 +18,7 @@ const Translator = () => {
   
   const handleTranslate = async () => {
     setTranslationOutput(await GetTranslation(translationInput, inputLanaguage, outputLanaguage )) 
+    console.log(translationOutput)
   }
 
   const handleClickswitch = () => {
@@ -36,20 +38,20 @@ const Translator = () => {
 
       <Box p = {2} sx = {{background: 'white'}} alignItems = 'center' justifyItems='center' display='flex' flexDirection='column' height= '50vh'>
         <Typography variant = 'h5' sx = {{marginBottom: '1rem'}}>
-          Translator
+          <h2 className="heading">Translator</h2>
         </Typography>
 
         
 
         <Stack direction='row'   justifyContent="space-between" width='60%' marginBottom= '1rem'>
-          {inputLanaguage === 'EN' ? <span>English</span> : <span>Spanish</span>}
-          <SwapHorizIcon onClick = {handleClickswitch} />
-          {inputLanaguage === 'EN' ? <span>Spanish</span> : <span>English</span>}
+          {inputLanaguage === 'EN' ? <span className="subheading">English</span> : <span className="subheading">Spanish</span>}
+          <div className="swapIcon"><SwapHorizIcon style = {{fontSize: '42px'}}onClick = {handleClickswitch} /></div>
+          {inputLanaguage === 'EN' ? <span className="subheading">Spanish</span> : <span className="subheading">English</span>}
 
         </Stack>
 
 
-        <Stack  p = {2} direction = 'row' justifyContent='space-between' sx = {{ width: "90%"}}   divider={<Divider orientation="vertical" flexItem />}
+        <Stack  p = {2} direction = 'column' justifyContent='space-between' sx = {{flexDirection: {sm: 'row'}}}   divider={<Divider orientation="vertical" flexItem />}
 >
   
             <Box
@@ -57,7 +59,8 @@ const Translator = () => {
           sx={{
             '& .MuiTextField-root': { m: 1 },
             flex: '1',
-            padding: '1rem'
+            padding: '1rem',
+            minWidth: {xl: '700px', lg: '600px', md: '450px', sm: '350px', xs: '375px' }
         
             
     
@@ -70,9 +73,11 @@ const Translator = () => {
             value = {translationInput}
             id="outlined-multiline-flexible"
             id="fullWidth"
-            label="Enter English here"
+            label= {inputLanaguage === 'EN' ? `Enter English here`: 'Enter Spanish Here'}
             multiline
+            rows = {10}
             fullWidth
+            
             onInput = {e => setTranslationInput(e.target.value) }
             
           
@@ -82,18 +87,20 @@ const Translator = () => {
           {/* <Box sx = {{borderRight: 'solid black 2px'}}>
           </Box> */}
 
-      
-          <Box p = {1} sx = {{flex: '1', alignContent: 'center', alignContent: 'center', justifyContent:'center'}} justifyContent = 'center' alightContent = 'center'>
-             {translationOutput}
-            <Typography sx  >
-            </Typography>
+          <Box p = {2} sx = {{flex: '1', minWidth: {xl: '700px', lg: '600px', md: '450px', sm: '350px', xs: '375px'}}}>
+            <Box p = {2} sx = {{flex: '1', alignContent: 'center', alignContent: 'center', justifyContent:'center', border: 'gray 2px solid', width: '100%', minHeight: '264px'}}  justifyContent = 'center' alightContent = 'center'>
+              {translationOutput}
+              <Typography sx  >
+              </Typography>
+            </Box>
           </Box>
+          
 
         </Stack>
         <button className = 'button' onClick = {handleTranslate} >Translate</button>
-
-        </Box>
         <Footer />
+        </Box>
+        
       </Box>
   )
 }

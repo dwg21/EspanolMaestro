@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import { Typography, Box, Card, Stack} from "@mui/material";
-import { ContentPasteSearchOutlined, CoPresentOutlined } from '@mui/icons-material';
 
 
 const VerbtestData = {

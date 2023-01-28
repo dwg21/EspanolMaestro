@@ -1,11 +1,19 @@
 import React from 'react';
+import { VocabularyDrill, VocabularyForm, Footer} from '.';
+import { useState } from 'react';
 
-import { VocabularyDrill } from '.';
 
 const Vocabulary = () => {
-  return (
+  const [vocabularyDrillActive, SetVocabularyDrillActive] = useState(false)
+
+  return (  
     <div>
-      <VocabularyDrill />
+      { vocabularyDrillActive ?
+        <VocabularyDrill
+         vocabularyDrillActive = {vocabularyDrillActive}
+         SetVocabularyDrillActive = {SetVocabularyDrillActive} /> : 
+        <VocabularyForm />
+      }
     </div>
   )
 }

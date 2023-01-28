@@ -9,7 +9,9 @@ import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 
-import { ConjugationDrill } from ".";
+
+
+import { ConjugationDrill, Footer } from ".";
 
 
 const names = [
@@ -66,10 +68,11 @@ const ConjugationForm = ({conjugationFormActive, setConjugationFormActive}) => {
   }
    
   return (
-    <Box p = {2}  >
+    <Box>
+    <Box  p = {2} display = 'flex' alignContent='center' justifyContent='center'>
         {conjugationFormActive == false ?
-        
-        <Card sx = {{padding: '1.5rem', display: "flex", justifyContent: 'center' , alignItems: 'center', flexDirection: 'column' , width: '50%'}}>
+
+      <Card sx = {{padding: '1.5rem', display: "flex", justifyContent: 'center' , alignItems: 'center', flexDirection: 'column' , maxWidth: '800px'}}>
      <Typography variant = 'h5' sx = {{paddingBottom: '1.5rem'}}>Welcome to the Conjuagtion Excercise</Typography>
      <Typography sx = {{paddingBottom: '1.5rem'}} alignItems = 'initial'>This is an excercise designed to help you practise the conjuagtions of verbs in different tenses and siutaions. Please select your preferences.</Typography>
 
@@ -90,7 +93,7 @@ const ConjugationForm = ({conjugationFormActive, setConjugationFormActive}) => {
     </FormControl>
 
     <FormControl fullWidth sx = {{marginBottom: '2rem'}}>
-      <InputLabel id="demo-simple-select-label">Which tenses ? </InputLabel>
+      <InputLabel >Which Verbs ? </InputLabel>
       <Select
         labelId="Verbs"
         id="verbSelction"
@@ -111,6 +114,7 @@ const ConjugationForm = ({conjugationFormActive, setConjugationFormActive}) => {
         labelId="Select the tenses"
         id="tenses"
         multiple
+        fullWidth
         value={tenses}
         onChange={handleChange2}
         input={<OutlinedInput label="Select the tenses" />}
@@ -141,12 +145,15 @@ const ConjugationForm = ({conjugationFormActive, setConjugationFormActive}) => {
       
       />
       }
+
+  
     
 
     
 
 
     
+  </Box>
   </Box>
 
   )

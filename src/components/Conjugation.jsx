@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Typography, Box, Card } from "@mui/material";
 
 
-import { ConjugationForm } from './index'
+import { ConjugationForm, Footer } from './index'
 
 
 const names = [
@@ -38,9 +38,12 @@ const Conjugation = () => {
 
   return (
     <Box p = {2}>
+            {conjugationFormActive == false ? 
+            <h2 className="heading" align = 'center'>Conjugation Excercise</h2>: <></>}
             <ConjugationForm 
             conjugationFormActive = {conjugationFormActive}
             setConjugationFormActive = {setConjugationFormActive} />
+      <Footer/>
 
     </Box>
 
