@@ -20,6 +20,29 @@ export {default as learn} from './learn.gif';
 export {default as write} from './write.gif';
 export {default as read} from './read.gif';
 
+export {default as knee} from './knee.gif';
+export {default as eye} from './eye.gif';
+export {default as finger} from './finger.gif';
+export {default as hand} from './hand.gif';
+export {default as nose} from './nose.gif';
+export {default as ear} from './ear.gif';
+
+
+export {default as rat} from './rat.gif';
+export {default as horse} from './horse.gif';
+export {default as elephant} from './elephant.gif';
+export {default as pig} from './pig.gif';
+export {default as whale} from './whale.gif';
+export {default as tiger} from './tiger.gif';
+
+
+
+
+
+
+
+
+
 
 
 

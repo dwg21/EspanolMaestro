@@ -1,0 +1,36 @@
+th,
+td {
+  border: 1px solid black;
+  margin: 0px 0px;
+  padding: 7px 7px;
+}
+
+.tableHeading {
+border: none;
+font-weight: 700;
+font-size: medium;
+}
+
+.verbHeading {
+    color: blue;
+}
+
+table { 
+    table-layout:fixed;
+}
+
+/* td { 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;
+} */
+/* 
+@media only screen and (max-width: 480px) {
+    horizontal scrollbar for tables if mobile screen
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+j */

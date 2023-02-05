@@ -1,0 +1,93 @@
+.footer-container {
+    display: flex;
+}
+
+.footer-container-left {
+    flex: 1 ;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+.footer-container-center {
+    flex: 1 ;
+    padding: 20px;
+}
+
+.footer-container-right {
+    flex: 1 ;
+    padding: 20px;
+}
+
+
+.footer-container-left p {
+ padding: 20px 0px ;
+ 
+}
+
+.socialContainer {
+    display: flex;
+}
+
+.socialIcon {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    background-color:#0A66C2 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.footer-container-center h3 {
+    margin-bottom: 30px;
+}
+.footer-container-center ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+    display: inline-block;
+}
+
+.footer-container-center li {
+    width: 80%;
+    margin-bottom: 10px;
+    margin-right: 50px;
+   
+}
+
+.contactItem {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-container-right img {
+    width: 50%;
+    height: auto;
+}
+
+.footer-container-right h3 {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer-container-center {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-container-right {
+        background-color: #fcf5f5
+    }
+}
+
+Link {
+    all: unset
+}
